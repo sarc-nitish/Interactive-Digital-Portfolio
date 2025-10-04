@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitish Kumar | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">MY PORTFOLIO</a>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-links" id="desktopMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <!-- Theme toggle -->
+        <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!--  Mobile Side Drawer -->
+    <div class="side-drawer" id="sideDrawer">
+        <button class="close-btn" id="closeBtn"><i class="fas fa-times"></i></button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!--  Overlay (blur background when menu opens) -->
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="background-animation" id="particles"></div>
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="typing-text" id="typing-text"></span></h1>
+            <p>“Hi, I’m Nitish Kumar — Building Intelligent Systems that Solve Real-World Problems with AI & ML. Passionate
+                about learning, coding, and turning ideas into innovative solutions..</p>
+            <a href="#projects" class="cta-button">View Projects</a>
+        </div>
+
+        <!-- Profile Circle with Glowing Effect -->
+        <div class="profile-circle">
+            <img src="profile.jpg" alt="Nitish Kumar">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="profile-img">
+                <img src="img.jpg" alt="Nitish Kumar">
+            </div>
+            <div class="about-text">
+                <p>Hi! I’m Nitish Kumar — an AI/ML & Generative AI enthusiast. I love turning data into insights and
+                    building intelligent systems that solve real-world problems.</p>
+
+                 <p>  I started exploring AI during my undergraduate studies and have worked on projects involving machine
+                    learning, deep learning, NLP, and computer vision.</p> 
+
+                  <p>   My goal is to create ethical, data-driven solutions that make a positive impact in healthcare,
+                    education, and sustainability.</p>
+                <a href="https://drive.google.com/file/d/1AC0kAEh20GrNNVtEvGhHK_Q5nIH_OSjp/view?usp=sharing" class="resume-button" download="Nitish-Kumar-Resume.pdf">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card" data-tilt>
+                <i class="fab fa-python skill-icon"></i>
+                <h3 class="skill-name">Python</h3>
+                <div class="skill-progress">
+                    <div class="skill-bar" style="width: 0%;" data-width="95%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-tilt>
+                <i class="fab fa-java skill-icon"></i>
+                <h3 class="skill-name">Java DSA</h3>
+                <div class="skill-progress">
+                    <div class="skill-bar" style="width: 0%;" data-width="85%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-tilt>
+                <i class="fab fa-html5 skill-icon"></i>
+                <h3 class="skill-name">HTML 5</h3>
+                <div class="skill-progress">
+                    <div class="skill-bar" style="width: 0%;" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-tilt>
+                <i class="fas fa-database skill-icon"></i>
+                <h3 class="skill-name">MySQL</h3>
+                <div class="skill-progress">
+                    <div class="skill-bar" style="width: 0%;" data-width="90%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-tilt>
+                <i class="fab fa-css3-alt skill-icon"></i>
+                <h3 class="skill-name">CSS</h3>
+                <div class="skill-progress">
+                    <div class="skill-bar" style="width: 0%;" data-width="88%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-tilt>
+                <i class="fas fa-brain skill-icon"></i>
+                <h3 class="skill-name">AI & ML</h3>
+                <div class="skill-progress">
+                    <div class="skill-bar" style="width: 0%;" data-width="85%"></div>
+                </div>
+            </div>
+             <div class="skill-card" data-tilt>
+                <i class="fas fa-magic skill-icon"></i>
+                <h3 class="skill-name">Generative AI</h3>
+                <div class="skill-progress">
+                    <div class="skill-bar" style="width: 0%;" data-width="85%"></div>
+                </div>
+            </div>
+             <div class="skill-card" data-tilt>
+                <i class="fab fa-aws skill-icon"></i>
+                <h3 class="skill-name">AWS Cloud</h3>
+                <div class="skill-progress">
+                    <div class="skill-bar" style="width: 0%;" data-width="85%"></div>
+                </div>
+            </div>
+                 <div class="skill-card" data-tilt>
+                <i class="fab fa-github skill-icon"></i>
+                <h3 class="skill-name">Git & GitHub</h3>
+                <div class="skill-progress">
+                    <div class="skill-bar" style="width: 0%;" data-width="85%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-tilt>  
+                <div class="project-img">
+                    <img src="Project 1.png" alt="Face-Mask-Detection">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Face-Mask-Detection</h3>
+                    <p class="project-desc">Developed a system whichis implemented using a Convolutional Neural Network (CNN) built with Keras and TensorFlow. The model architecture features multiple convolutional, pooling, dropout, and dense layers, culminating in a binary classification output ("mask" or "no mask"). Training leverages a labeled dataset containing thousands of images, split into training and test sets for robust evaluation. The model achieves a test accuracy of 91.5%, demonstrating strong performance in automated mask detection.</p>
+                    <div class="project-links">
+                        <a href="https://face-mask-detection-ejreakexfdti5zojogi6om.streamlit.app/"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/sarc-nitish/Face-Mask-Detection-App.git"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt>
+                <div class="project-img">
+                    <img src="Project 2.png" alt="Employee Salary Prediction">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Employee Salary Prediction</h3>
+                    <p class="project-desc">This project is a Capstone Machine Learning project focused on predicting whether an employee earns more than $50K per year using demographic and employment data.
+                                            The model is trained on the UCI Adult Income Dataset, and various ML algorithms were applied. After comparison, the GradientBoosting Classifier was chosen as the best-performing model.</p>
+                    <div class="project-links">
+                        <a href="https://employee-salary-prediction-using-classification-algorithms.streamlit.app/"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/sarc-nitish/Employee-Salary-Prediction.git"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-tilt>
+                <div class="project-img">
+                    <img src="Project 3.jpg" alt="Forensic Scanner Identification">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title"> AI-TraceFinder - Forensic Scanner Identification</h3>
+                    <p class="project-desc">Determine which scanner was used to forge or duplicate legal documents.</p>
+                    <div class="project-links">
+                        <a href=" https://aitracefinder-nitishkumar-main.streamlit.app"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/sarc-nitish/AI_TraceFinder-NitishKumar.git"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates" id="certificates">
+        <h2 class="section-title">Achievements & Certificates</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="certificate-card">
+                    <!-- <h1>Coming SooN</h1> -->
+                    <h3 class="certificate-title">
+                        Python for Data Science and AI
+                    </h3>
+                    <p class="certificate-org">
+                    <a href="https://www.credly.com/badges/961b08ef-2c0f-40c9-a6f7-12e4c091af4f/print" target="_blank" rel="noopener noreferrer" class="certificate-link" style="text-decoration: none; color: #6c63ff;">Coursera</a></p>
+                    <p class="certificate-date">Completed: Oct 2024</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="certificate-card">
+                    
+                    <h3 class="certificate-title">Artificial Intelligence Fundamentals</h3>
+                    <a href="https://www.credly.com/badges/b4c1b2d0-58fa-41b4-9f17-fd504b7ed722" target="_blank" rel="noopener noreferrer" class="certificate-link" style="text-decoration: none; color: #6c63ff;">IBM SkillsBuild</a></p>
+                    <p class="certificate-date">Completed: June 2025</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="certificate-card">
+                   
+                    <h3 class="certificate-title">Artificial Intelligence Primer</h3>
+                    <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer" class="certificate-link" style="text-decoration: none; color: #6c63ff;">Infosys Springboard</a></p>
+                    <p class="certificate-date">Completed: June 2025</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="certificate-card">
+                    <h3 class="certificate-title">Principles of Generative AI</h3>
+                    <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer" class="certificate-link" style="text-decoration: none; color: #6c63ff;">Infosys Springboard</a></p>
+                    <p class="certificate-date">Completed: June 2025</p>
+                </div>
+            </div>
+                <div class="timeline-item">
+                <div class="certificate-card">
+                    <h3 class="certificate-title">Web Development Fundamentals</h3>
+                    <a href="https://www.credly.com/badges/9e9afccd-26c6-4b95-bf9a-2446765f41b8" target="_blank" rel="noopener noreferrer" class="certificate-link" style="text-decoration: none; color: #6c63ff;">IBM SkillsBuild</a></p>
+                    <p class="certificate-date">Completed: Sept 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="contactForm" action="https://formspree.io/f/mdklypre" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+
+                    <!-- ✅ Success Message Placeholder -->
+                    <p id="successMsg" class="success-msg">✅ Message sent successfully!</p>
+                </form>
+
+
+            </div>
+            <div class="contact-info">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/nitish-kumar-8a39a02a6" class="social-link"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/sarc-nitish" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://WA.me/7557788368" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                     <a href="https://www.instagram.com/sarc_nitish" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <span>nitish75577@gmail.com.com</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 7557788368</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Gaya,Bihar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Nitish Kumar All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
