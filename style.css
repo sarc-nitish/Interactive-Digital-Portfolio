@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #6c63ff;
-  --secondary-color: #3d30ec;
+  --primary-color: #7b73ff; /* Slightly lighter purple for better contrast in dark mode */
+  --secondary-color: #4b40ec; /* Adjusted for better distinction */
   --text-dark: #1a1a1a;
-  --text-light: #f8f9fa;
+  --text-light: #e0e0e0; /* Softer white for better readability in dark mode */
   --bg-light: #ffffff;
   --bg-dark: #121212;
   --card-light: #f8f9fa;
-  --card-dark: #1e1e1e;
+  --card-dark: #252525; /* Slightly lighter dark background for cards */
   --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.1);
   --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.3);
   --transition: all 0.3s ease;
@@ -85,21 +85,8 @@ body.dark-mode .preloader {
   -webkit-backdrop-filter: blur(10px);
   transition: var(--transition);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  
 }
 
-/* Ensure sticky navbar on mobile */
-@media (max-width: 768px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-}
-
-/* Fix logo and hamburger overlap in mobile */
 @media (max-width: 768px) {
   .navbar {
     position: fixed;
@@ -282,20 +269,16 @@ body.dark-mode .hero p {
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
-    /* text aur image column me */
     text-align: center;
   }
 
   .profile-circle {
     position: relative !important;
-    /* absolute hatao */
     right: auto !important;
     top: auto !important;
     transform: none !important;
     margin: 0 auto 20px;
-    /* center me photo */
     order: -1;
-    /* photo ko text ke upar bhej dega */
   }
 }
 
@@ -435,6 +418,11 @@ body.dark-mode .profile-img {
 .about-text p {
   margin-bottom: 20px;
   line-height: 1.8;
+  color: var(--text-dark); /* Added for clarity */
+}
+
+body.dark-mode .about-text p {
+  color: var(--text-light); /* Ensure text is readable in dark mode */
 }
 
 .resume-button {
@@ -554,7 +542,7 @@ body.dark-mode .projects {
 }
 
 body.dark-mode .project-card {
-  background-color: var(--bg-dark);
+  background-color: var(--card-dark); /* Use card-dark for better contrast */
   box-shadow: var(--shadow-dark);
 }
 
@@ -719,7 +707,7 @@ body.dark-mode .certificate-card:hover {
 }
 
 body.dark-mode .certificate-date {
-  color: #aaa;
+  color: #bbb; /* Lighter gray for better readability in dark mode */
 }
 
 /* Contact Section */
@@ -906,14 +894,12 @@ textarea.form-control {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-
   .hero,
   section {
     padding: 100px 50px;
   }
 
   .profile-circle {
-    /* right: 50px; */
     width: 200px;
     height: 200px;
   }
@@ -1018,7 +1004,8 @@ textarea.form-control {
     height: 150px;
   }
 }
-/* 🌟 Projects Section Background (light glow) */
+
+/* Projects Section Background */
 .projects {
   position: relative;
   background: radial-gradient(circle at 20% 20%, rgba(108, 99, 255, 0.05), transparent 60%),
@@ -1027,7 +1014,6 @@ textarea.form-control {
   border-radius: 20px;
 }
 
-/* 🌟 Project Card Styling */
 .project-card {
   background: #fff;
   border-radius: 20px;
@@ -1037,14 +1023,14 @@ textarea.form-control {
   text-align: center;
 }
 
-/* 🌟 Hover Effect (Glow + Lift) */
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 30px rgba(108, 99, 255, 0.4);
 }
+
 .success-msg {
   display: none;
-  color: #28a745; /* Success green */
+  color: #28a745;
   margin-top: 12px;
   font-weight: 600;
   font-size: 15px;
@@ -1052,10 +1038,12 @@ textarea.form-control {
   transition: opacity 0.6s ease-in-out;
   text-shadow: 0px 0px 8px rgba(40, 167, 69, 0.3);
 }
+
 .success-msg.show {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
+
 /* Hamburger Icon */
 .hamburger {
   display: none;
@@ -1072,46 +1060,42 @@ textarea.form-control {
   transition: left 0.4s;
 }
 
-/* Hamburger stays left when drawer open */
-
-
-/* Only show on phone view */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
 }
 
-/* Color in dark mode */
 body.dark-mode .hamburger span {
-  background: #fff;
+  background: var(--text-light); /* Ensure hamburger is visible in dark mode */
 }
 
 .hamburger span {
   display: block;
   height: 3px;
   width: 100%;
-  background: black; /* visible in light */
+  background: black;
   border-radius: 5px;
   transition: 0.4s;
 }
 
-/* Animate to X */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Side Drawer (LEFT) */
+/* Side Drawer */
 .side-drawer {
   position: fixed;
   top: 0;
-  left: -260px; /* hidden initially */
+  left: -260px;
   width: 250px;
   height: 100%;
   background: var(--secondary-color);
@@ -1142,7 +1126,7 @@ body.dark-mode .hamburger span {
 }
 
 .side-drawer a:hover {
-  color: black;
+  color: var(--text-light); /* Lighter hover color for contrast */
 }
 
 /* Close Button */
@@ -1177,7 +1161,6 @@ body.dark-mode .hamburger span {
   display: block;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -1187,18 +1170,16 @@ body.dark-mode .hamburger span {
   }
 }
 
-/* Dark mode: drawer bg white, text black */
 body.dark-mode .side-drawer {
-  background: #fff;
-  color: #111;
-  font-weight: bold;
+  background: var(--card-dark); /* Use card-dark for consistency */
+  color: var(--text-light);
 }
 
 body.dark-mode .side-drawer a,
 body.dark-mode .close-btn {
-  color: #111;
+  color: var(--text-light);
 }
 
 body.dark-mode .side-drawer a:hover {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Match primary color for hover */
 }
