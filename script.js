@@ -1,5 +1,3 @@
-
-// Preloader
 window.addEventListener('load', function () {
     setTimeout(() => {
         document.querySelector('.preloader').style.opacity = '0';
@@ -9,9 +7,8 @@ window.addEventListener('load', function () {
     }, 1000);
 });
 
-// Typing Effect
 const typingText = document.getElementById('typing-text');
-const texts = [ 'Python Developer','Backend Developer','Generative AI Enthusiast','AI & ML Engineer'];
+const texts = ['Python Developer', 'Backend Developer', 'Generative AI Enthusiast', 'AI & ML Engineer'];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -46,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, 500);
 });
 
-// Background Particles
 function createParticles() {
     const container = document.getElementById('particles');
     const numberOfParticles = 20;
@@ -55,7 +51,6 @@ function createParticles() {
         const particle = document.createElement('div');
         particle.classList.add('particle');
 
-        // Random properties
         const size = Math.random() * 100 + 50;
         const opacity = Math.random() * 0.3 + 0.1;
         const delay = Math.random() * 15;
@@ -75,9 +70,13 @@ function createParticles() {
 
 createParticles();
 
-// Theme Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
+
+// Set dark mode by default
+body.classList.add('dark-mode');
+themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+localStorage.setItem('theme', 'dark');
 
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
@@ -91,13 +90,6 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// Check for saved theme preference
-if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-}
-
-// Navbar Sticky
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -107,6 +99,7 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('sticky');
     }
 });
+
 const hamburger = document.getElementById("hamburger");
 const sideDrawer = document.getElementById("sideDrawer");
 const closeBtn = document.getElementById("closeBtn");
@@ -130,7 +123,6 @@ overlay.addEventListener("click", () => {
     overlay.classList.remove("active");
 });
 
-// Close side drawer when any item is clicked
 sideDrawer.querySelectorAll("a").forEach(item => {
     item.addEventListener("click", () => {
         hamburger.classList.remove("active");
@@ -139,7 +131,6 @@ sideDrawer.querySelectorAll("a").forEach(item => {
     });
 });
 
-// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -154,7 +145,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Back to Top Button
 const backToTopButton = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
@@ -172,7 +162,6 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
-// VanillaTilt for 3D effects
 VanillaTilt.init(document.querySelectorAll(".skill-card"), {
     max: 15,
     speed: 400,
@@ -187,8 +176,6 @@ VanillaTilt.init(document.querySelectorAll(".project-card"), {
     'max-glare': 0.3
 });
 
-// Animate skill bars when in view
-
 const skillBars = document.querySelectorAll('.skill-bar');
 
 const animateSkills = () => {
@@ -198,7 +185,6 @@ const animateSkills = () => {
     });
 };
 
-// Intersection Observer for skill animation
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -212,7 +198,6 @@ document.querySelectorAll('.skills-container').forEach(container => {
     observer.observe(container);
 });
 
-// Form submission
 const contactForm = document.getElementById('contactForm');
 const successMsg = document.getElementById('successMsg');
 
@@ -225,11 +210,7 @@ if (contactForm) {
             headers: { 'Accept': 'application/json' }
         }).then(() => {
             contactForm.reset();
-
-            // ✅ Show success message with fade-in
             successMsg.classList.add("show");
-
-            // ⏳ Hide after 4s
             setTimeout(() => {
                 successMsg.classList.remove("show");
             }, 4000);
@@ -239,8 +220,6 @@ if (contactForm) {
     });
 }
 
-
-// Timeline animation on scroll
 const timelineItems = document.querySelectorAll('.timeline-item');
 
 const timelineObserver = new IntersectionObserver((entries) => {
